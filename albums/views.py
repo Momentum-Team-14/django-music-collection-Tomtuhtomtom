@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Album, Artist
+from django.views import generic
 
 def index(request):
     """View function for home page of site."""
@@ -17,3 +18,10 @@ def index(request):
 
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
+
+class AlbumListView(generic.ListView):
+    model = Album
+
+
+class AlbumDetailView(generic.DetailView):
+    model = Album

@@ -11,14 +11,14 @@ class Album(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('album-detail-view', args=[str(self.id)])
+        return reverse('album-detail', args=[str(self.id)])
 
 
 class Artist(models.Model):
     name = models.CharField(max_length=200, help_text='Enter a band or artist')
     
     def get_absolute_url(self):
-        return reverse('artist-detail-view', args=[str(self.id)])
+        return reverse('artist-detail', args=[str(self.id)])
 
     def __str__(self):
         return self.name
