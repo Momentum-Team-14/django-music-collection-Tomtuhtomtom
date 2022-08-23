@@ -3,6 +3,16 @@
 {% block content %}
     <h1>{{ artist.name }}</h1>
 
-    <p><strong>Album:</strong> <a href="{% url 'albums' %}">{{ album }}</a></p>
+    <p><strong>field placeholder</strong> <a href=""></a></p>
+
+    <div style="margin-left:20px;margin-top:20px">
+        <h4>Albums:</h4>
+        
+        <dl>
+        {% for album in artist.album_set.all %}
+            <dt><a href="{% url 'album-detail' album.pk %}">{{album}}</a></dt>
+            <dd></dd>
+        {% endfor %}
+        </dl>
 
 {% endblock %}

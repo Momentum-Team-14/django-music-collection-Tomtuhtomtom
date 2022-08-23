@@ -1,12 +1,12 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>Album List</h1>
+    <h1>All Albums</h1>
     {% if album_list %}
     <ul>
         {% for album in album_list %}
             <li>
-                <a href="{{ album.get_absolute_url }}">{{ album.title }}</a> ({{album.artist}})
+                <a href="{{ album.get_absolute_url }}">{{ album.title }}</a> by {{album.artist}}
             </li>
         {% endfor %}
     </ul>
