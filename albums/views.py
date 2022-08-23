@@ -21,7 +21,17 @@ def index(request):
 
 class AlbumListView(generic.ListView):
     model = Album
+    paginate_by = 10
 
 
 class AlbumDetailView(generic.DetailView):
     model = Album
+
+
+class ArtistListView(generic.ListView):
+    model = Artist
+    paginate_by = 10
+
+
+class ArtistDetailView(generic.DetailView):
+    model = Artist
