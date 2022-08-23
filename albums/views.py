@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .models import Album, Artist
 from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from albums.models import Artist
+
 
 def index(request):
     """View function for home page of site."""
@@ -35,3 +39,16 @@ class ArtistListView(generic.ListView):
 
 class ArtistDetailView(generic.DetailView):
     model = Artist
+
+
+class ArtistCreate(CreateView):
+    model = Artist
+    fields = ['name']
+
+class ArtistUpdate(UpdateView):
+    model = Artist
+    fields = '__all__' # Not recommended (potential security issue if more fields added)
+
+class ArtistDelete(DeleteView):
+    model = Artist
+    success_url = reverse_lazy('artists')

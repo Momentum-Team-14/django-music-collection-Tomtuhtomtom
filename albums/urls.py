@@ -8,3 +8,9 @@ urlpatterns = [
     path('artists/', views.ArtistListView.as_view(), name='artists'),
     path('artist/<int:pk>', views.ArtistDetailView.as_view(), name='artist-detail'),
 ]
+
+urlpatterns += [
+    path('artist/create/', views.ArtistCreate.as_view(), name='artist-create'),
+    path('artist/<int:pk>/update/', views.ArtistUpdate.as_view(), name='artist-update'),
+    path('artist/<int:pk>/delete/', views.ArtistDelete.as_view(), name='artist-delete'),
+]
