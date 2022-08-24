@@ -10,6 +10,7 @@
             </li>
         {% endfor %}
     </ul>
+    <p><a href="{% url 'album-create' %}">Add Album</a></p>
     {% else %}
         <p>There are no albums in the library.</p>
     {% endif %}

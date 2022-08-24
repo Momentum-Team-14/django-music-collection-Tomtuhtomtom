@@ -14,3 +14,9 @@ urlpatterns += [
     path('artist/<int:pk>/update/', views.ArtistUpdate.as_view(), name='artist-update'),
     path('artist/<int:pk>/delete/', views.ArtistDelete.as_view(), name='artist-delete'),
 ]
+
+urlpatterns += [
+    path('album/create/', views.AlbumCreate.as_view(), name='album-create'),
+    path('album/<int:pk>/update/', views.AlbumUpdate.as_view(), name='album-update'),
+    path('album/<int:pk>/delete/', views.AlbumDelete.as_view(), name='album-delete'),
+]

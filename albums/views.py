@@ -40,7 +40,6 @@ class ArtistListView(generic.ListView):
 class ArtistDetailView(generic.DetailView):
     model = Artist
 
-
 class ArtistCreate(CreateView):
     model = Artist
     fields = ['name']
@@ -52,3 +51,15 @@ class ArtistUpdate(UpdateView):
 class ArtistDelete(DeleteView):
     model = Artist
     success_url = reverse_lazy('artists')
+
+class AlbumCreate(CreateView):
+    model = Album
+    fields = ['title', 'artist']
+
+class AlbumUpdate(UpdateView):
+    model = Album
+    fields = '__all__' # Not recommended (potential security issue if more fields added)
+
+class AlbumDelete(DeleteView):
+    model = Album
+    success_url = reverse_lazy('albums')

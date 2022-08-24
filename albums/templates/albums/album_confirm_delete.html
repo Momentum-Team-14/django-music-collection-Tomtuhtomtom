@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<h1>Delete Artist</h1>
+<h1>Delete Album</h1>
 
-<p>Are you sure you want to delete the artist: {{ artist }}?</p>
+<p>Are you sure you want to delete the album: {{ album }}?</p>
 
 <form action="" method="POST">
     {% csrf_token %}
     <input type="submit" value="Yes, delete.">
 </form>
-<p><a href="{{ artist.get_absolute_url }}">Go Back</a></p>
+<p><a href="{{ album.get_absolute_url }}">Go Back</a></p>
 {% endblock %}
