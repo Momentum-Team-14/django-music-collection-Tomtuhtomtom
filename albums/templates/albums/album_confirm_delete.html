@@ -8,7 +8,7 @@
 
 <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Yes, delete.">
+    <input class="btn btn-success" type="submit" value="Yes, delete.">
+    <a href="{{ album.get_absolute_url }}" class="btn btn-secondary">Cancel</a>
 </form>
-<p><a href="{{ album.get_absolute_url }}">Go Back</a></p>
 {% endblock %}
