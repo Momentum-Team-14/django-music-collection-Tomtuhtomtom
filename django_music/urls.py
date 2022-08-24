@@ -28,7 +28,7 @@ urlpatterns += [
 ]
 
 urlpatterns += [
-    path('', RedirectView.as_view(url='albums/', permanent=True)),
+    path('', RedirectView.as_view(url='albums/', permanent=False)),
 ]
 
 from django.conf import settings
