@@ -131,7 +131,7 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = ''
+MEDIA_URL = 'covers/'
 MEDIA_ROOT = ''
 
 # INTERNAL_IPS = [

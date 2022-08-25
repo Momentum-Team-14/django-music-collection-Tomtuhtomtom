@@ -35,7 +35,7 @@ urlpatterns += [
 ]
 
 urlpatterns += [
-    path('covers/<int:cover_id>', views.cover)
+    path('covers/<int:cover_id>', views.cover, name='album-cover')
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
