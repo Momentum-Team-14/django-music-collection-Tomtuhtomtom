@@ -9,7 +9,6 @@ admin.site.register(Genre)
 class CoverAdmin(admin.ModelAdmin):
     readonly_fields = ('id',)
 
-
 admin.site.register(Cover, CoverAdmin)
 
 # if I want to add list_display, fields, etc.

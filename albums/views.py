@@ -67,7 +67,7 @@ class AlbumDelete(DeleteView):
 
 
 def cover(request, cover_id):
-    Cover.objects.get(pk=cover_id)
+    cover = Cover.objects.get(pk=cover_id)
     if cover is not None:
         return render(request, 'covers/cover.html', {'cover': cover})
     else:

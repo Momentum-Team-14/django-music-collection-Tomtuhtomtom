@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <!-- <img src="{{ cover.image }}" alt="Album Cover" width="20" height="20"> -->
+    <img src="{{ cover.image }}" alt="Album Cover" width="20" height="20">
     <h1 class="entry-title"><em>{{ album.title }}</em></h1>
 
     <p><strong>Artist:</strong> <a class="entry-title" href="{% url 'artist-detail' album.artist.pk %}">{{ album.artist }}</a></p>
