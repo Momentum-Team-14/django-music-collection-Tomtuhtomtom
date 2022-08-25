@@ -5,6 +5,7 @@ from django.urls import reverse
 class Album(models.Model):
     title = models.CharField(max_length=200, help_text='Enter an album')
     artist = models.ForeignKey('Artist', on_delete=models.SET_NULL, null=True)
+    genre = models.ForeignKey('Genre', on_delete=models.SET_NULL, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -19,6 +20,13 @@ class Artist(models.Model):
     
     def get_absolute_url(self):
         return reverse('artist-detail', args=[str(self.id)])
+
+    def __str__(self):
+        return self.name
+
+
+class Genre(models.Model):
+    name = models.CharField(max_length=200, help_text='Enter a music genre')
 
     def __str__(self):
         return self.name

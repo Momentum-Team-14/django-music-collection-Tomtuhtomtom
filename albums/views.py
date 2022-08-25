@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Album, Artist
+from .models import Album, Artist, Genre
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -54,7 +54,7 @@ class ArtistDelete(DeleteView):
 
 class AlbumCreate(CreateView):
     model = Album
-    fields = ['title', 'artist']
+    fields = ['title', 'artist', 'genre']
 
 class AlbumUpdate(UpdateView):
     model = Album
