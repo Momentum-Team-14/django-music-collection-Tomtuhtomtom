@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from .models import Album, Artist, Genre
+from .models import Album, Artist, Genre, Cover
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from albums.models import Artist
+from django.http import Http404
 
 
 def index(request):
@@ -54,7 +55,7 @@ class ArtistDelete(DeleteView):
 
 class AlbumCreate(CreateView):
     model = Album
-    fields = ['title', 'artist', 'genre']
+    fields = ['cover', 'title', 'artist', 'genre']
 
 class AlbumUpdate(UpdateView):
     model = Album
@@ -64,3 +65,10 @@ class AlbumDelete(DeleteView):
     model = Album
     success_url = reverse_lazy('albums')
 
+
+def image(request, cover_id):
+    Cover.objects.get(pk=cover_id)
+    if image is not None:
+        return render(request, 'images/image.html', {'image': image})
+    else:
+        raise Http404('Image does not exist')

@@ -13,7 +13,7 @@ header {
 }
 
 #main-title {
-    background-image: url('static/orange.png');
+    background-image: url('media/orange.png');
     background-repeat: no-repeat;
     background-size: 8rem;
     font-family: Monaco;

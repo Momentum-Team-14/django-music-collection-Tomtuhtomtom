@@ -3,6 +3,7 @@ from django.urls import reverse
 
 
 class Album(models.Model):
+    cover = models.ForeignKey('Cover', on_delete=models.SET_NULL, null=True)
     title = models.CharField(max_length=200, help_text='Enter an album')
     artist = models.ForeignKey('Artist', on_delete=models.SET_NULL, null=True)
     genre = models.ForeignKey('Genre', on_delete=models.SET_NULL, null=True)
@@ -30,3 +31,11 @@ class Genre(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Cover(models.Model):
+    image = models.ImageField(upload_to="media")
+    title = models.CharField(max_length=200, help_text='Enter a title for this image')
+
+    def __str__(self):
+        return self.title
