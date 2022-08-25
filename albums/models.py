@@ -34,7 +34,7 @@ class Genre(models.Model):
 
 
 class Cover(models.Model):
-    image = models.ImageField(upload_to="media")
+    image = models.ImageField(upload_to="static")
     title = models.CharField(max_length=200, help_text='Enter a title for this image')
 
     def __str__(self):

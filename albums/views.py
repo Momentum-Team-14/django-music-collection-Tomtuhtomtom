@@ -66,9 +66,9 @@ class AlbumDelete(DeleteView):
     success_url = reverse_lazy('albums')
 
 
-def image(request, cover_id):
+def cover(request, cover_id):
     Cover.objects.get(pk=cover_id)
-    if image is not None:
-        return render(request, 'images/image.html', {'image': image})
+    if cover is not None:
+        return render(request, 'covers/cover.html', {'cover': cover})
     else:
         raise Http404('Image does not exist')
