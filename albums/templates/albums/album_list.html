@@ -6,7 +6,8 @@
     <ul>
         {% for album in album_list %}
             <li>
-                <a href="{{ album.get_absolute_url }}">{{ album.title }}</a> by {{album.artist}}
+                <em><a class="entry-list" href="{{ album.get_absolute_url }}">{{ album.title }}</a></em>
+                <p class="album-list-artist">by {{album.artist}}</p>
             </li>
         {% endfor %}
     </ul>

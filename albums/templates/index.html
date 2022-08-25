@@ -1,12 +1,14 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>My Albums</h1>
-    <p>Welcome to my album library!</p>
-    <h2>------------</h2>
+    <header>
+        <div id="main-title">🍊Orang_eMusic Library
+            <h1 id="subtitle"><em>There is no comparison.</em></h1>
+        </div>
+    </header>
     <p>The library has the following record counts:</p>
     <ul>
-        <li><strong>Albums:</strong> {{ num_albums }}</li>
-        <li><strong>Artists:</strong> {{ num_artists }}</li>
+        <li class="main-page-list"><strong>Albums:</strong> {{ num_albums }}</li>
+        <li class="main-page-list"><strong>Artists:</strong> {{ num_artists }}</li>
     </ul>
 {% endblock %}

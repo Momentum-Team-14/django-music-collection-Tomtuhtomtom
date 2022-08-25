@@ -1,7 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>{{ artist.name }}</h1>
+    <h1 class="entry-title">{{ artist.name }}</h1>
 
     <p><strong>field placeholder</strong> <a href=""></a></p>
     <p><a href="{% url 'artist-update' artist.pk %}">Edit</a></p>
@@ -12,7 +12,7 @@
         
         <dl>
         {% for album in artist.album_set.all %}
-            <dt><a href="{% url 'album-detail' album.pk %}">{{album}}</a></dt>
+            <dt><a class="entry-title" href="{% url 'album-detail' album.pk %}">{{album}}</a></dt>
             <dd></dd>
         {% endfor %}
         </dl>

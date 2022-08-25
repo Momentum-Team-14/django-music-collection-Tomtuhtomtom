@@ -3,6 +3,42 @@ body {
     background-color: #afbaee;
 }
 
+header {
+    background: linear-gradient(
+        to right, 
+        rgba(175, 186, 238, 0), rgba(221, 179, 40, 1));
+    width: 100%;
+    color: rgb(37, 90, 164);
+    margin: 0;
+}
+
+#main-title {
+    background-image: url('static/orange.png');
+    background-repeat: no-repeat;
+    background-size: 8rem;
+    font-family: Monaco;
+    font-weight: bold;
+    font-size: 4rem;
+    width: 55rem;
+    margin: 2rem 0 0 3rem;
+    text-align: right;
+}
+
+#subtitle {
+    font-family: 'Times New Roman';
+    font-weight: normal;
+    font-size: 1.2rem;
+    text-align: right;
+    padding: 0;
+    margin: 0 .5rem 1rem 0;
+}
+
+.main-page-list {
+    font-family: 'Arial';
+    font-size: 1.2rem;
+    color: rgb(184, 120, 1);
+}
+
 .col-sm-2 {
     background: linear-gradient(
         to bottom, 
@@ -32,12 +68,54 @@ li {
     list-style: none;
 }
 
+.entry-list {
+    color:rgb(242, 223, 188);
+}
+
+.entry-list:hover {
+    color:rgb(221, 179, 40);
+}
+
+.entry-title {
+    color:rgb(242, 223, 188);
+}
+
+.entry-title:hover {
+    color:rgb(221, 179, 40);
+}
+
 p {
     font-family: Monaco;
     color: rgb(37, 90, 164);
 }
 
-h1 {
+.album-list-artist {
+    font-size: .8rem;
+}
+
+
+h1, h4 {
     font-family: Monaco;
     color: rgb(37, 90, 164);
 }
+
+input {
+    background-color:rgb(242, 223, 188);
+}
+
+.btn-success {
+    background-color: rgb(221, 179, 40);
+}
+
+.btn-success:hover {
+    background-color: rgb(242, 223, 188);
+}
+
+.btn-secondary {
+    background-color: rgb(37, 90, 164);
+}
+
+.btn-secondary:hover {
+    background-color: rgb(175, 186, 238);
+}
+
